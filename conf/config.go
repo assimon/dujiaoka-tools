@@ -27,8 +27,8 @@ func InitConfig() error {
 	if err != nil {
 		return err
 	}
-	newDBSect := cfg.Section("new_db")
-	oldDBSect := cfg.Section("old_db")
+	newDBSect := cfg.Section("migrate_new_db")
+	oldDBSect := cfg.Section("migrate_old_db")
 	NewDBDns = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local&charset=utf8mb4&collation=utf8mb4_unicode_ci",
 		newDBSect.Key("user"),
 		newDBSect.Key("password"),

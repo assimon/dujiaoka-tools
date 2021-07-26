@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/assimon/dujiaoka_migrate/handles"
+	"github.com/assimon/dujiaoka_migrate/utils"
 	"github.com/gookit/color"
 	"github.com/gookit/gcli/v3"
 )
@@ -17,7 +18,11 @@ func InitCli() {
 		Desc:    "迁移数据到2.x版本",
 		Aliases: []string{"mvtt"},
 		Func: func(c *gcli.Command, args []string) error {
-			err := handles.MigrateVersionToTwo()
+			err := utils.InitDB()
+			if err != nil {
+				return err
+			}
+			err = handles.MigrateVersionToTwo()
 			return err
 		},
 	})
