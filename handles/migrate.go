@@ -10,7 +10,7 @@ const ForMaxNum = 200
 
 func MigrateVersionToTwo() error {
 	var err error
-	/*color.Warn.Println("开始迁移商品分类...")
+	color.Warn.Println("开始迁移商品分类...")
 	err = migrateGoodsGroup()
 	if err != nil {
 		color.Error.Printf("商品分类迁移失败，已终止。 错误：%s", err.Error())
@@ -37,7 +37,7 @@ func MigrateVersionToTwo() error {
 		color.Error.Printf("卡密迁移失败，已终止。 错误：%s", err.Error())
 		return err
 	}
-	color.Success.Println("卡密迁移成功！")*/
+	color.Success.Println("卡密迁移成功！")
 	color.Warn.Println("开始迁移订单...")
 	err = migrateOrders()
 	if err != nil {
