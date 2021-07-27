@@ -43,5 +43,5 @@ go build -o  djtools
 进入打包好的版本列表，下载程序：[https://github.com/assimon/dujiaoka-tools/releases](https://github.com/assimon/dujiaoka-tools/releases) 
 运行：   
 ```shell
-./dujiao-tools -h
+./dujiaoka-tools -h
 ```
